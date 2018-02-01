@@ -11,17 +11,29 @@ body{
     background-color: blueviolet;
     border: rgb(77, 14, 135) solid;
     padding: 15px;
+    color: rgb(rgb(174, 0, 255), green, blue);
+    font-size: 40px;
+    
 }
 
 table{
     
     border: 2px gray solid;
     border-collapse: collapse;
+    display: inline-block
 }
 
 td, th {
     border: 2px gray solid;
     border-collapse: collapse;
     padding: 5px;
+  
     
+}
+#reviewersList2{
+color: rgb(173, 9, 9);
+
+
+   
+
 }

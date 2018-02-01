@@ -25,15 +25,33 @@ function leaderPicker() {
 
 
 let reviewersList = document.getElementById('reviewersList');
+let newReviewersList = document.getElementById('reviewersList2')
 students.forEach(student => {
     let tableRow = document.createElement('tr');
     reviewersList.appendChild(tableRow);
     let tableData1 = document.createElement('td');
-    let tableData2 = document.createElement('td');
     tableRow.appendChild(tableData1);
-    tableRow.appendChild(tableData2);
     tableData1.innerHTML = student;
-    document.getElementById('leaderPicker').addEventListener('click', function () {
-        tableData2.innerHTML = students[Math.floor(Math.random() * students.length)];
-    });
 });
+
+let newStudent = [];
+
+for (let i = students.length - 1; i > 0; i--) {
+    let randomIndex = Math.floor(Math.random() * (i + 1));
+    let randomElement = students[randomIndex];
+    students[randomIndex] = students[i];
+    students[i] = randomElement;
+
+}
+students.forEach(student => {
+    let tableRow2 = document.createElement('tr');
+
+    newReviewersList.appendChild(tableRow2);
+    let tableData2 = document.createElement('td');
+    tableRow2.appendChild(tableData2);
+    document.getElementById('leaderPicker').addEventListener('click', function () {
+        tableData2.innerHTML = student;
+
+    });
+})
+
