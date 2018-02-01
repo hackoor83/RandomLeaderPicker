@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(224, 200, 250);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main{
+    text-align: center;
+}
+
+#leaderName{
+    background-color: blueviolet;
+    border: rgb(77, 14, 135) solid;
+    padding: 15px;
+}
+
+table{
+    
+    border: 2px gray solid;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 2px gray solid;
+    border-collapse: collapse;
+    padding: 5px;
+    
+}
